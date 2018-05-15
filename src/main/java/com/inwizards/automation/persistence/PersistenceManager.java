@@ -58,4 +58,14 @@ public class PersistenceManager {
 
         return (d == null) ? null : d.getDeploymentUnits();
     }
+
+  /////////////////////////////////////////////////////-----------Deployment Unit ------////////////////////////////////////////////////////////////////////////////
+
+    public static Set<DeploymentUnit> getAllDeploymentUnits() {
+        return new HashSet<>(deploymentUnits.values());
+    }
+
+    public static void createDeploymentUnit(DeploymentUnit unit) {
+        deploymentUnits.put(unit.getId(), unit);
+    }
 }

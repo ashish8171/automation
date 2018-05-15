@@ -38,7 +38,7 @@ public class DeploymentController {
 
     @ResponseBody
     @ResponseStatus(value = HttpStatus.OK)
-    @RequestMapping(value = "/update", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/remove", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Deployment removeDeploymentUnit(DeploymentRequest req) {
         return PersistenceManager.removeDeploymentUnit(req.getId(), req.getDeploymentUnitId());
     }
